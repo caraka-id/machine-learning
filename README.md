@@ -15,12 +15,15 @@
 </div>
 
 <br />
-<p align="justify">
+
+## Project Summary
+
 
 <img src="images/Caraka Workflow.png" width=100% alt="Caraka Workflow">
 
+<p align="justify">
   In the machine learning workflow, I began by curating and creating my own datasets,
-  ensuring that they were representative of the problem at hand. Utilizing TensorFlow,
+  ensuring that they were representative of the problem at hand. I also add a little bit extra datasets for Lampungnese Scripts from Kaggle Datasets. Utilizing TensorFlow,
   I employed the <code>image_dataset_from_directory</code> function, configuring the image to a size of
   150 x 150 x 3. For training and validation, the data was divided 80:20 split.
   Employing the  <code>tf.data.AUTOTUNE</code>  feature, I fine-tuned the data processing pipeline
@@ -30,8 +33,7 @@
   To preserver the trained model, I saved it in the <code>.h5</code> model format and securely stored
   it in the Google Cloud Platform, ensuring accessibility and scalability for future 
   applications and analysis. This comprehensive workflow reflects a systematic
-  approach to developing and deploying machine learning models.
-
+  approach to developing and deploying machine learning models.<br><br>
   To improve feature extraction, the picture is first read using the 
   opencv-python package. It is then converted to a grayscale representation
   and blurred. The image is then examined to determine an appropriate threshold 
@@ -55,9 +57,9 @@ boxes.sort(key=lambda x: (x[0], x[1]))
 </p>
 
 <div align="center">
-    <img src="images/model_bali_summary.png" alt="bali_summary" width="33%" />
-    <img src="images/model_sunda_summary.png" alt="sunda_summary" width="33%" />
-    <img src="images/model_lampung_summary.png" alt="lampung-summary" width="32%" />
+    <img src="images/model_bali_summary.png" alt="bali_summary" width="32.5%" />
+    <img src="images/model_sunda_summary.png" alt="sunda_summary" width="32.5%" />
+    <img src="images/model_lampung_summary.png" alt="lampung-summary" width="32.5%" />
 </div>
 
 <p align="justify">
@@ -75,19 +77,16 @@ boxes.sort(key=lambda x: (x[0], x[1]))
 </p>
 
 <div align="center">
-    <img src="images/model_bali_accuracy.png" alt="bali_epochs" width="32%" />
-    <img src="images/model_sunda_accuracy.png" alt="sunda_epochs" width="32%" />
-    <img src="images/model_lampung_accuracy.png" alt="lampung_epochs" width="32%" />
-
+    <img src="images/model_accuracy.png" alt="bali_epochs" width="100%" />
 </div>
 
 <p align="justify">
   The model passes through more or less than 35 epochs during the training phase, with
   a learning rate of 0.0005. The employment of <code>categorical-crossentropy</code>
   as the chosen loss function and the application of the <code>AdamW</code> optimizer
-  help this procedure. This well-designed configuration improves the model's
-  ability to learn and identify characters correctly
-
+  help this procedure reached more than 99% accuracy on both training and validation sets. This well-designed configuration improves the model's
+  ability to learn and identify characters correctly.
+  <br><br>
   Once the classification model has been successfully trained, 
   the project moves on with the seamless integration of other 
   characteristics, including picture segmentation. The model's 
@@ -96,7 +95,7 @@ boxes.sort(key=lambda x: (x[0], x[1]))
   makes the model more effective and creates new application 
   opportunities by enabling it to carry out more complicated 
   tasks than only character identification.
-
+  <br><br>
   This project, taken as a whole, demonstrates how to deploy EfficientNetV2-B0
   effectively, use a variety of machine learning techniques, including transfer
   learning with pre-trained weights, and build a strong character identification
@@ -106,7 +105,7 @@ boxes.sort(key=lambda x: (x[0], x[1]))
 
 
 
-### Built With
+## Built With
 
 [![Python][python]][python-url]
 [![Tensorflow][tensorflow]][tensorflow-url]
@@ -114,6 +113,14 @@ boxes.sort(key=lambda x: (x[0], x[1]))
 [![OpenCV][opencv]][opencv-url]
 [![Numpy][numpy]][numpy-url]
 [![Matplotlib][matplotlib]][matplotlib-url]
+
+## Machine Learning's Team
+
+|Name |Bangkit ID| University|
+|-----|----------|-----------|
+|<a href="https://www.linkedin.com/in/jonekaa">Jonathan Eka| M244BSY0067| Universitas Kristen Petra|
+|<a href="https://www.linkedin.com/in/gathaaa">Agatha Angelina| M244BSX0068| Universitas Kristen Petra|
+|<a href="<https://www.linkedin.com/in/edinaalana/"> Edina Alana | M296BSX1153 | Universitas Pembangunan Nasional Veteran Jawa Timur|
 
 [tensorflow]: https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white
 [tensorflow-url]: https://tensorflow.org/
